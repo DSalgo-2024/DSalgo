@@ -46,4 +46,7 @@ public class Registerpage {
        {
     	   driver.findElement(register).click();
        }
+       public void test() {
+    	   
+       }
 }
