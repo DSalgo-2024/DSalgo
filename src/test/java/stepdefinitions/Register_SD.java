@@ -1,15 +1,23 @@
 package stepdefinitions;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageobjects.Registerpage;
 
 public class Register_SD {
 
+	public WebDriver driver;
+	
+	public Registerpage RP;
 	
 	@Given("User entered Valid username and password")
 	public void user_entered_valid_username_and_password() {
-	    
+	    driver=new ChromeDriver();
+	    RP =new Registerpage(driver);
 	}
 
 	@When("user clicks register button1")
