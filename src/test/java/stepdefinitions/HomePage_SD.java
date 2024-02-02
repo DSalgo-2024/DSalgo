@@ -51,7 +51,8 @@ public class HomePage_SD {
 	public void user_is_on_home_page() {
 		driver=new ChromeDriver();
 		HP = new HomePage(driver);
-	    driver.get("https://dsportalapp.herokuapp.com/home");
+
+
 	}
 
 	@When("User Clicks data structures Drop down")

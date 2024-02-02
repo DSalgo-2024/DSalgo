@@ -18,7 +18,7 @@ Feature: Exploring the Register Page
 
     Examples: 
     
-      | Priya  | test1 | test1  |
+      | username  | password | confirmpwd  |
       |  |     samplepwd | samplepwd |
       | girija |     123456 | 123456    |
       | sai |     123456 | sample    |

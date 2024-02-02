@@ -9,10 +9,10 @@ import org.openqa.selenium.WebElement;
 public class Registerpage {
 	
       public WebDriver driver;
-
-       private By Username =By.id("id_username");
-       private By passwd =By.id("id_password1");
-       private By cfmpwd=By.id("id_password2");
+      
+       private By Username =By.xpath("//input[@name='username']");
+       private By passwd =By.xpath("//input[@id='id_password1']");
+       private By cfmpwd=By.xpath("//input[@id='id_password2']");
        private By register=By.xpath("//input[@value='Register']");
 
        public Registerpage(WebDriver d) {
@@ -25,14 +25,15 @@ public class Registerpage {
        public void enteruname(String Uname)
        {
     	  WebElement luname=driver.findElement(Username);
-    	  luname.clear();
-    	  luname.sendKeys(Uname);
+    	      luname.clear();
+    	   	  luname.sendKeys(Uname);
+    	   	
        }
        
        public void enterpwd(String pwd)
        {
     	   WebElement lpwd=driver.findElement(passwd);
-    	   lpwd.clear();
+    	  lpwd.clear();
     	   lpwd.sendKeys(pwd);
        }
        public void entercpwd(String cpwd)
@@ -46,7 +47,6 @@ public class Registerpage {
        {
     	   driver.findElement(register).click();
        }
-       public void test() {
-    	   
-       }
+       
+       
 }
