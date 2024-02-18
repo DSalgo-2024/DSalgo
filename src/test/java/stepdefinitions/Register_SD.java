@@ -11,17 +11,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.Registerpage;
+import utilities.baseclass;
 
-public class Register_SD {
+public class Register_SD extends baseclass {
 
-	public WebDriver driver;
+	//public WebDriver driver;
 	
-	public Registerpage RP;
+	//public Registerpage RP;
 	
 	@Given("User entered Valid username and password")
 	public void user_entered_valid_username_and_password() {
-	    driver=new ChromeDriver();
-	    RP =new Registerpage(driver);
+	   // driver=new ChromeDriver();
+	    //RP =new Registerpage(driver);
 	    driver.get("https://dsportalapp.herokuapp.com/register");
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 	    
@@ -43,8 +44,8 @@ public class Register_SD {
 
 	@Given("User have entered invald {string} and {string} and {string}")
 	public void user_have_entered_invald_and_and(String username, String password, String confirmpwd) {
-	    driver=new ChromeDriver();
-		RP =new Registerpage(driver);
+	    //driver=new ChromeDriver();
+		//RP =new Registerpage(driver);
 	    driver.get("https://dsportalapp.herokuapp.com/register");
 	    
 	    RP.enteruname(username);

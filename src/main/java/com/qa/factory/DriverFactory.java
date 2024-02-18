@@ -9,7 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
-	WebDriver driver;
+	public WebDriver driver;
 
 	public static ThreadLocal<WebDriver> threadlocal= new ThreadLocal<>();
 
@@ -17,9 +17,14 @@ public class DriverFactory {
 		System.out.println("browser value is" + browser);
 		
 		if(browser.equals("chrome")) {
-		
-				WebDriverManager.chromedriver().setup();
+			
+			System.out.println("inside chrome");		
+				//WebDriverManager.chromedriver().setup();
+			WebDriver driver=new ChromeDriver();
+			
 				threadlocal.set(new ChromeDriver());
+				System.out.println("driver is set");
+				
 	    }
 		else if(browser.equals("firefox")) {
 		WebDriverManager.firefoxdriver().setup();
