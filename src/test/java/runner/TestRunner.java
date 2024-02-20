@@ -11,11 +11,12 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/Features/Array.feature",
-		tags="@tag4",
+		tags="@tag5",
 		glue ={"stepdefinitions","myhooks"},
 		//glue ="stepdefinitions",
 		monochrome = true,
-		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","pretty","html:target/Results.html","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
+		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","pretty","html:target/Results.html","json:target/cucumber.json", 
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 		//dryRun=true
 					
 		)

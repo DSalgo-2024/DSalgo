@@ -198,40 +198,15 @@ public class ArrayPage_SD extends baseclass{
 	    
 	}
 
-	@When("User enters the below Python code in the Text Editor")
+	/*@When("User enters the below Python code in the Text Editor")
 	public void user_enters_the_below_python_code_in_the_text_editor(DataTable dataTable) throws InterruptedException {
-	   
-		 List<List<String>> listdata = dataTable.asLists(String.class);
-		 By texteditor=By.xpath("//div[@class='input']/div/div/textarea");
-		 Actions action=new Actions(driver);
-		 
-		 driver.findElement(texteditor).sendKeys(Keys.CONTROL,"a");
-		 driver.findElement(texteditor).sendKeys(Keys.DELETE);
-		 Thread.sleep(1000);		 
-		 driver.findElement(texteditor).sendKeys(listdata.get(0).get(0));
-		 driver.findElement(texteditor).sendKeys(listdata.get(1).get(0));
-		 driver.findElement(texteditor).sendKeys(listdata.get(2).get(0));
-		 driver.findElement(texteditor).sendKeys(listdata.get(3).get(0));
-		 driver.findElement(texteditor).sendKeys(listdata.get(4).get(0));
-		 //driver.findElement(texteditor).sendKeys(Keys.BACK_SPACE);
-		 //driver.findElement(texteditor).sendKeys(Keys.BACK_SPACE);
-		 action.sendKeys(Keys.BACK_SPACE).build().perform();
-		 action.sendKeys(Keys.BACK_SPACE).build().perform();
-		 
-		 driver.findElement(texteditor).sendKeys(listdata.get(5).get(0));
-		 driver.findElement(texteditor).sendKeys(Keys.ARROW_LEFT);
-		 driver.findElement(texteditor).sendKeys(Keys.ARROW_LEFT);
-		 driver.findElement(texteditor).sendKeys(Keys.ARROW_LEFT);
-		 driver.findElement(texteditor).sendKeys(Keys.ARROW_LEFT);
-		 /*action.sendKeys(Keys.ARROW_LEFT).build().perform();
-		 action.sendKeys(Keys.ARROW_LEFT).build().perform();
-		 action.sendKeys(Keys.ARROW_LEFT).build().perform();
-		 action.sendKeys(Keys.ARROW_LEFT).build().perform();*/
-		 driver.findElement(texteditor).sendKeys(listdata.get(6).get(0));
-		 driver.findElement(texteditor).sendKeys(listdata.get(7).get(0));
-		 driver.findElement(texteditor).sendKeys(listdata.get(8).get(0));
-		
+	   		Ap.sendpythoncode();
+		}*/	
+	@When("User enters the Python code in the Text Editor")
+	public void user_enters_the_python_code_in_the_text_editor() {
+		Ap.sendpythoncode();
 	}
+
 
 	@When("User Clicks the run button")
 	public void user_clicks_the_run_button() throws InterruptedException {
