@@ -11,7 +11,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/Features/Array.feature",
-		tags="@tag5",
+		tags="@tag4",
 		glue ={"stepdefinitions","myhooks"},
 		//glue ="stepdefinitions",
 		monochrome = true,
