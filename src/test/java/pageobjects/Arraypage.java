@@ -71,9 +71,7 @@ public void clicklbtn() throws InterruptedException {
 	 }
 
       public void sendtexteditor(String Text) throws InterruptedException {
-    	  //Thread.sleep(1000);
-    	 // driver.findElement(texteditor).clear();
-    	  
+    	      	  
     	 driver.findElement(texteditor).sendKeys(Text);
     	  /*JavascriptExecutor js=((JavascriptExecutor)driver);
     	  
@@ -88,9 +86,6 @@ public void clicklbtn() throws InterruptedException {
     	  
       }
       public void sendpythoncode() {
-    	  //Actions action=new Actions(driver);
-    	  //action.sendKeys(Keys.CONTROL,"a");
-    	  //action.sendKeys(Keys.DELETE);
     	  driver.findElement(texteditor).sendKeys(Keys.CONTROL,"a");
     	  driver.findElement(texteditor).sendKeys(Keys.DELETE);
     	  String pythoncode="print'hello'";

@@ -1,6 +1,5 @@
 package com.qa.factory;
 
-import org.apache.commons.math3.geometry.spherical.twod.Edge;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Browserlaunch {
 
 	
-	public static WebDriver driver=null;
+	public WebDriver driver = null;
 	
 	public WebDriver launchBrowser(String browser) {
 		System.out.println("inside method");
@@ -26,7 +25,7 @@ public class Browserlaunch {
 				driver=new EdgeDriver();
 				break;
              			
-			}return driver;
+			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
